@@ -94,8 +94,8 @@ body{
 }
 
 .poster .scoring .star-value{
-    font-size: 80%;
-    color: gray;
+    font-size: 90%;
+    color: whitesmoke;
 }
 
 .poster .scoring .genre span{

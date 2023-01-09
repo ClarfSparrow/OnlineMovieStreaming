@@ -14,9 +14,7 @@ include_once __DIR__ . '/functions.php';
   $newim = "SELECT * FROM movies order by mid DESC LIMIT 3";
   $newrecords = mysqli_query($conn,$newim);
     while($fetchr = mysqli_fetch_assoc($newrecords)){
-
       echoMovie($fetchr['name'], $fetchr['imgpath'], $fetchr['score'], $fetchr['genre']);
-
 
     }
 

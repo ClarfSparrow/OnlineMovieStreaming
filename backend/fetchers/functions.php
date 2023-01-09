@@ -61,7 +61,7 @@ function genre_tags($genre){
 }
 
 function echoMovie($name, $imgpath, $score, $genre){
-
+    !empty($imgpath) ? $imgpath : $imgpath = 'default.jpg';
     echo "<form action='movie.php' method='POST'>";
     echo "<div class='col'>";
 	echo "<figure class='poster'>";

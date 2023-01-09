@@ -34,12 +34,12 @@ if (isset($_POST['upload'])) {
   $image_txt = $_POST['image_txt'];
   $video_txt = $_POST['video_txt'];
 
-  $sql = "INSERT INTO movies (name, rdate, genre, runtime, decription, imgpath, videopath)
-          VALUES( ? , ? , ? , ? , ? , ? , ? )";
+  $sql = "INSERT INTO movies (name, rdate, genre, score, runtime, decription, imgpath, videopath)
+          VALUES( ? , ? , ? , ? , ? , ? , ? , ?)";
   
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	$stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssssss", $name, $rdate, $genre, $rtime, $desc, $image_txt, $video_txt);
+    $stmt->bind_param("ssssssss", $name, $rdate, $genre, $score, $rtime, $desc, $image_txt, $video_txt);
     $stmt->execute();
   
   header("Location: ../homepage.php");

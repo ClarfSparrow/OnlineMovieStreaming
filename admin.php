@@ -36,16 +36,17 @@ session_start();
 
            <form class="" action="backend/admin_control.php" method="POST" enctype="multipart/form-data">
 
-            <input type="text" class="form-control" placeholder="Movie Name" name="mname" value="" required><br>
+            <input type="text" class="form-control" placeholder="Movie Name" name="mname" value="" maxlength="30" required>
+             <br>
              <input type="text" class="form-control" placeholder="Year of Release" name="release" value="">
              <br>
-             <input type="text" class="form-control" placeholder="Genre" name="genre" value="">
+             <input type="text" class="form-control" placeholder="Genre" name="genre" value="" maxlength="25">
              <br>
                <input type="number" class="form-control" placeholder="Score (1-5)" name="score" min="1" max="5">
              <br>
-             <input type="number" class="form-control" placeholder="Runtime in minutes" name="rtime" value="">
+             <input type="number" class="form-control" placeholder="Runtime in minutes" name="rtime" value="" max="9999">
              <br>
-             <input type="text" class="form-control" placeholder="Description..." name="desc" value="">
+             <input type="text" class="form-control" placeholder="Description..." name="desc" value="" maxlength="100">
              <br>
              <label for=""><b>Switch between: Upload automatically video/image or adding video/image names and upload files manually</b></label>
              <br>
